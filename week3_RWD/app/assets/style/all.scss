@@ -1,0 +1,290 @@
+@import "_reset";
+@import "_grid";
+@import "_variables";
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.google.com/specimen/Noto+Sans?query=san");
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.header {
+  background-color: $primary-color;
+  &-inner {
+    max-width: 1744px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 88px;
+    @include pad() {
+      padding: 30px 39px;
+    }
+    @include phone() {
+      flex-wrap: wrap;
+      padding: 0;
+    }
+    @include phone() {
+      a {
+        width: 100%;
+        
+      }
+    }
+    img {
+      width: 80px;
+      @include phone() {
+        width: 48px;
+        display: block;
+        margin: 0 auto;
+        padding: 10px 0;
+      }
+    }
+    ul {
+      display: flex;
+      @include phone() {
+        flex-wrap: wrap;
+      }
+      li {
+        font-family: $Ch-font;
+        font-size: 20px;
+        line-height: 28px;
+        @include phone() {
+          border: 1px solid #fff;
+          width: 186px;
+        }
+        a {
+          color: #ffffff;
+          padding: 0px 32px;
+          @include pad() {
+            padding: 0px;
+            margin-left: 40px;
+          }
+          @include phone() {
+            display: block;
+            text-align: center;
+            margin-left: 0;
+            padding: 8px 0;
+          }
+          &:hover {
+            color: #650300;
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  background-color: $primary-color;
+  &-inner {
+    max-width: 1110px;
+    margin: 0px auto;
+    padding-top: 36px;
+    @include pad() {
+      padding: 40px 39px;
+    }
+    @include phone() {
+      padding: 15px 24px;
+      position: relative;
+    }
+  }
+  &-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+    @include pad() {
+      margin-left: 9px;
+    }
+    @include phone() {
+      margin-bottom: 0;
+      position: relative;
+    }
+    
+  }
+  ul {
+    display: flex;
+    li {
+      font-family: $Ch-font;
+    }
+  }
+  .page-links{
+    @include phone() {
+      display: none;
+    }
+  }
+}
+
+.page-links a {
+  color: #ffffff;
+  margin-right: 48px;
+  padding: 12px 0;
+  font-size: 16px;
+  line-height: 24px;
+  @include pad() {
+    margin-right: 40px;
+  }
+  &:hover {
+    color: #650300;
+  }
+}
+.social-links {
+  @include phone() {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  a {
+    padding: 0 16px;
+    @include pad() {
+      padding: 0 12px;
+    }
+    @include phone() {
+      padding: 0;
+      margin-left: 24px;
+    }
+  }
+  @include pad() {
+    img {
+      width: 24px;
+    }
+  }
+}
+.infoline {
+  padding-bottom: 20px;
+  @include phone() {
+    padding-bottom: 7px;
+  }
+  img {
+    width: 48px;
+    vertical-align: middle;
+    margin-right: 12px;
+    @include pad() {
+      width: 24px;
+    }
+    @include phone() {
+      width: 20px;
+    }
+  }
+  @include pad() {
+    .w32 {
+      width: 32px;
+    }
+    .mr8 {
+      margin-right: 8px;
+    }
+  }
+  @include phone() {
+    .w32 {
+      width: 20px;
+    }
+    .mr8 {
+      margin-right: 5px;
+    }
+  }
+  a {
+    font-size: 36px;
+    line-height: 54px;
+    color: #fff;
+    vertical-align: middle;
+    @include pad() {
+      font-size: 20px;
+      line-height: 30px;
+    }
+    @include phone() {
+      font-size: 16px;
+      line-height: 30px;
+    }
+  }
+}
+
+.bord-b {
+  border-bottom: 1px solid #fff;
+}
+.mb24 {
+  margin-bottom: 24px;
+  @include phone() {
+    padding-bottom: 24px;
+    margin-bottom: 18px;
+  }
+}
+
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 28.43px;
+  @include phone() {
+    flex-direction: column;
+    align-items: start;
+    position: relative;
+    padding: 0;
+  }
+  ul {
+    display: flex;
+    align-items: center;
+    @include phone() {
+      flex-direction: column;
+      align-items: start;
+      
+    }
+    li {
+      @include phone() {
+        margin-bottom: 8px;
+      }
+      img {
+        width: 80px;
+        margin-right: 38px;
+        @include pad() {
+          display: none;
+        }
+        @include phone() {
+          width: 46px;
+          display: block;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          margin-right: 0;
+        }
+        
+      }
+      span {
+        font-size: 16px;
+        line-height: 24px;
+        @include phone() {
+          font-size: 14px;
+          line-height: 21px;
+        }
+        color: #fff;
+        font-family: "Roboto";
+      }
+    }
+    a {
+      margin-right: 62px;
+      color: #fff;
+      @include pad() {
+        margin-right: 0;
+        margin-left: 24px;
+      }
+      @include phone() {
+        margin: 0;
+      }
+      &:hover {
+        color: #650300;
+      }
+    }
+  }
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  // background-color: $primary-color
+  transition: all 0.5s;
+  &:hover {
+    width: 200px;
+    // background-color: $primary-color;
+  }
+}
